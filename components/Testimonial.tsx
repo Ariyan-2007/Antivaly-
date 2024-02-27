@@ -4,7 +4,7 @@ import React from "react";
 const Testimonial = () => {
   return (
     <div>
-      <div className="container pt-16 pb-16 grid-col-2">
+      <div className="container pt-16 pb-16 grid-cols-2">
         <h2 className="font-semibold text-2xl pb-4">TESTIMONIALS</h2>
         <div className="grid lg:grid-cols-[300px,1fr] gap-4">
           <div className="border border-blackish rounded-2xl grid place-items-center p-6 lg:p-0">

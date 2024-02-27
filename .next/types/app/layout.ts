@@ -1,4 +1,4 @@
-// File: E:\NextJS\Tutorial\Antivaly-\app\layout.tsx
+// File: C:\Users\e7480\Desktop\Ariyan\NextJS\ecommerce\Antivaly-\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
