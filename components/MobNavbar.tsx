@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaAppStore, FaHeart, FaHome, FaShoppingBag } from "react-icons/fa";
 import { IoMenuOutline } from "react-icons/io5";
@@ -47,7 +48,9 @@ const MobNavbar = () => {
           </div>
         </div>
 
-        <FaHome />
+        <Link href="/">
+          <FaHome />
+        </Link>
 
         <div className="relative">
           <FaHeart />

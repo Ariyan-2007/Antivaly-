@@ -6,10 +6,10 @@ const Navbar = () => {
     <div className="hidden lg:block">
       <div className="container">
         <div className="font-semibold flex w-fit gap-10 mx-auto py-4 text-[#3f3e3e]">
-          <Link className="navbar__link relative" href="#">
+          <Link className="navbar__link relative" href="/">
             HOME
           </Link>
-          <Link className="navbar__link relative" href="#">
+          <Link className="navbar__link relative" href="/category">
             CATEGORIES
           </Link>
           <Link className="navbar__link relative" href="#">

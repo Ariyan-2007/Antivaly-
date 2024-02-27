@@ -49,7 +49,7 @@ const productData = [
 const NewProducts = () => {
   return (
     <div>
-      <div className="container pt-16 ">
+      <div className="container pt-16 pb-8">
         <h2 className="font-semibold text-2xl pb-4">NEW PRODUCTS</h2>
 
         <div className="grid place-items-center sm:place-items-start grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 xl:gap-x-20 xl:gap-y-10 ">

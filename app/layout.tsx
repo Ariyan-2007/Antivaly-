@@ -4,6 +4,7 @@ import "./globals.css";
 import HeaderTop from "@/components/HeaderTop";
 import HeaderMain from "@/components/HeaderMain";
 import Navbar from "@/components/Navbar";
+import { FavoritesProvider } from "@/lib/FavoritesContext";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,10 +27,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <HeaderTop />
-        <HeaderMain />
-        <Navbar />
-        <MobNavbar />
-        {children}
+        <FavoritesProvider>
+          <HeaderMain />
+          <Navbar />
+          <MobNavbar />
+          {children}
+        </FavoritesProvider>
         <Footer />
       </body>
     </html>

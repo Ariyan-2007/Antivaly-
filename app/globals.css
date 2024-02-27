@@ -31,6 +31,15 @@
   }
 }
 
-.slick-list{
+.slick-list {
   border-radius: 1rem;
+}
+
+.heart-icon {
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.heart-icon.liked {
+  color: red; /* Change to your desired color */
 }

@@ -1,7 +1,12 @@
+"use client";
+
 import React from "react";
 import { FaHeart, FaSearch, FaShoppingBag, FaUser } from "react-icons/fa";
+import { useFavorites } from "@/lib/FavoritesContext";
 
 const HeaderMain = () => {
+  let { favorites } = useFavorites();
+
   return (
     <div className="border-b border-gray-200 py-6">
       <div className="container sm:flex justify-between items-center">
@@ -24,7 +29,7 @@ const HeaderMain = () => {
           <div className="relative">
             <FaHeart />
             <div className="bg-red-600 rounded-full absolute top-0 right-0 w-[16px] h-[16px] text-[10px] text-white grid place-items-center translate-x-1 -translate-y-1">
-              0
+              {favorites}
             </div>
           </div>
           <div className="relative">

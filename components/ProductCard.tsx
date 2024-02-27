@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
-import { FaRegStar, FaStar } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaHeart, FaRegHeart, FaRegStar, FaStar } from "react-icons/fa";
+import { useFavorites } from "@/lib/FavoritesContext";
 
 interface propsType {
   img: string;
@@ -17,6 +20,16 @@ const ProductCard: React.FC<propsType> = ({
   rating,
   price,
 }) => {
+  let { favorites, setFavorites } = useFavorites();
+  const [isLiked, setIsLiked] = useState(false);
+
+  const toggleLike = () => {
+    setIsLiked(!isLiked);
+    if (!isLiked) {
+      setFavorites(favorites + 1);
+    } else setFavorites(favorites - 1);
+  };
+
   const generateRating = (rating: number) => {
     switch (rating) {
       case 1:
@@ -97,7 +110,14 @@ const ProductCard: React.FC<propsType> = ({
         <div>{generateRating(rating)}</div>
         <div className="font-bold flex gap-4">
           BDT {price}{" "}
-          <del className="text-gray-500 font-normal">{Number(price) * 2}</del>
+          <del className="text-gray-500 font-normal">{Number(price) * 2}</del>{" "}
+        </div>
+
+        <div
+          className={`heart-icon ${isLiked ? "liked" : ""} w-fit`}
+          onClick={toggleLike}
+        >
+          {isLiked ? <FaHeart /> : <FaRegHeart />}
         </div>
       </div>
     </div>
