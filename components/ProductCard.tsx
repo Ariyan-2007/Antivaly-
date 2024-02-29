@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { FaHeart, FaRegHeart, FaRegStar, FaStar } from "react-icons/fa";
+import {
+  FaHeart,
+  FaRegHeart,
+  FaRegStar,
+  FaStar,
+  FaStarHalfAlt,
+} from "react-icons/fa";
 import { useFavorites } from "@/lib/FavoritesContext";
 
 interface propsType {
@@ -31,18 +37,24 @@ const ProductCard: React.FC<propsType> = ({
   };
 
   const generateRating = (rating: number) => {
-    const filledStars = Array.from({ length: rating }, (_, index) => (
-      <FaStar key={index} />
-    ));
-    const emptyStars = Array.from({ length: 5 - rating }, (_, index) => (
-      <FaRegStar key={index} />
+    const filledStars = Array.from(
+      { length: Math.floor(rating) },
+      (_, index) => <FaStar key={index} />
+    );
+
+    const halfStars = Array.from({ length: 1 }, (_, index) => (
+      <FaStarHalfAlt key={index} />
     ));
 
-    const halfStars = "";
+    const emptyStars = Array.from(
+      { length: 5 - Math.ceil(rating) },
+      (_, index) => <FaRegStar key={index} />
+    );
 
     return (
       <div className="flex gap-1 text-[20px] text-[#ff9529]">
         {filledStars}
+        {rating !== Math.floor(rating) ? halfStars : ""}
         {emptyStars}
       </div>
     );
