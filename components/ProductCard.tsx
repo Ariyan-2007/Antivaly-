@@ -38,6 +38,8 @@ const ProductCard: React.FC<propsType> = ({
       <FaRegStar key={index} />
     ));
 
+    const halfStars = "";
+
     return (
       <div className="flex gap-1 text-[20px] text-[#ff9529]">
         {filledStars}
