@@ -31,61 +31,19 @@ const ProductCard: React.FC<propsType> = ({
   };
 
   const generateRating = (rating: number) => {
-    switch (rating) {
-      case 1:
-        return (
-          <div className="flex gap-1 text-[20px] text-[#ff9529]">
-            <FaStar />
-            <FaRegStar />
-            <FaRegStar />
-            <FaRegStar />
-            <FaRegStar />
-          </div>
-        );
-      case 2:
-        return (
-          <div className="flex gap-1 text-[20px] text-[#ff9529]">
-            <FaStar />
-            <FaStar />
-            <FaRegStar />
-            <FaRegStar />
-            <FaRegStar />
-          </div>
-        );
+    const filledStars = Array.from({ length: rating }, (_, index) => (
+      <FaStar key={index} />
+    ));
+    const emptyStars = Array.from({ length: 5 - rating }, (_, index) => (
+      <FaRegStar key={index} />
+    ));
 
-      case 3:
-        return (
-          <div className="flex gap-1 text-[20px] text-[#ff9529]">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaRegStar />
-            <FaRegStar />
-          </div>
-        );
-      case 4:
-        return (
-          <div className="flex gap-1 text-[20px] text-[#ff9529]">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaRegStar />
-          </div>
-        );
-      case 5:
-        return (
-          <div className="flex gap-1 text-[20px] text-[#ff9529]">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </div>
-        );
-      default:
-        return null;
-    }
+    return (
+      <div className="flex gap-1 text-[20px] text-[#ff9529]">
+        {filledStars}
+        {emptyStars}
+      </div>
+    );
   };
   return (
     <div className="px-4 py-4 border border-gray-800 rounded-xl max-w-[400px]">
@@ -109,8 +67,8 @@ const ProductCard: React.FC<propsType> = ({
         </p>
         <div>{generateRating(rating)}</div>
         <div className="font-bold flex gap-4 line-clamp-1" title={price}>
-          BDT {price}{" "}
-          <del className="text-gray-500 font-normal">{Number(price) * 2}</del>{" "}
+          BDT {price}
+          <del className="text-gray-500 font-normal">{Number(price) * 2}</del>
         </div>
 
         <div

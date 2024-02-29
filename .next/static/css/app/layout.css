@@ -1353,6 +1353,10 @@ html {
 .border-none {
   border-style: none;
 }
+.border-accent {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 143 156 / var(--tw-border-opacity));
+}
 .border-blackish {
   --tw-border-opacity: 1;
   border-color: rgb(27 27 27 / var(--tw-border-opacity));
@@ -1368,10 +1372,6 @@ html {
 .border-gray-800 {
   --tw-border-opacity: 1;
   border-color: rgb(31 41 55 / var(--tw-border-opacity));
-}
-.border-accent {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 143 156 / var(--tw-border-opacity));
 }
 .bg-\[\#ffffffa2\] {
   background-color: #ffffffa2;
