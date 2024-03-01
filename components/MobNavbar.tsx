@@ -36,7 +36,7 @@ let {favorites = 0} = useFavorites();
 
   return (
     <div
-      className={`z-10 lg:hidden fixed bottom-0 w-full bg-gray-100 left-[50%] -translate-x-[50%] max-w-[1000px] mob_navbar px-8 transition-transform duration-500 transform ${
+      className={`z-10 lg:hidden fixed bottom-0 w-full bg-gray-100 left-[50%] -translate-x-[50%] max-w-[1000px] mob_navbar px-8 transition-transform duration-1000 transform ${
         show ? "translate-y-0" : "translate-y-full"
       }`}
     >
