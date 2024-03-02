@@ -7,7 +7,7 @@ const productData = [
     img: "/item-1.jpg",
     title: "Footwear",
     desc: "Tennis Shoes - Brown",
-    rating: 3.5,
+    rating: 2.5,
     price: "2500",
   },
   {
