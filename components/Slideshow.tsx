@@ -42,9 +42,9 @@ const Slideshow = () => {
     <div>
       <div className="container pt-6 lg:pt-0 rounded-xl">
         <Slider {...settings}>
-          {slideData.map((item) => (
+          {slideData.map((item, index) => (
             <Slide
-              key={item.id}
+              key={index}
               img={item.img}
               title={item.title}
               mainTitle={item.mainTitle}

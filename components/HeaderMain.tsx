@@ -5,7 +5,7 @@ import { FaHeart, FaSearch, FaShoppingBag, FaUser } from "react-icons/fa";
 import { useFavorites } from "@/lib/FavoritesContext";
 
 const HeaderMain = () => {
-  let { favorites } = useFavorites();
+  let { favorites = 0 } = useFavorites();
 
   return (
     <div className="border-b border-gray-200 py-6">

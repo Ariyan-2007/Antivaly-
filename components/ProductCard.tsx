@@ -12,6 +12,7 @@ import {
 import { useFavorites } from "@/lib/FavoritesContext";
 
 interface propsType {
+  id: number;
   img: string;
   title: string;
   desc: string;
@@ -20,6 +21,7 @@ interface propsType {
 }
 
 const ProductCard: React.FC<propsType> = ({
+  id,
   img,
   title,
   desc,
@@ -27,14 +29,28 @@ const ProductCard: React.FC<propsType> = ({
   price,
 }) => {
   let { favorites, setFavorites } = useFavorites();
-  const [isLiked, setIsLiked] = useState(false);
+  // const [isLiked, setIsLiked] = useState(false);
+  const [wishLists, setWishList] = useState<number[]>([]);
 
-  const toggleLike = () => {
-    setIsLiked(!isLiked);
-    if (!isLiked) {
+  const toggleWishList = (value: number) => {
+    if (wishLists.includes(value)) {
+      // If value is already in the wish list, remove it
+      const updatedWishLists = wishLists.filter((item) => item !== value);
+      setFavorites(favorites - 1);
+      setWishList(updatedWishLists);
+    } else {
+      // If value is not in the wish list, add it
       setFavorites(favorites + 1);
-    } else setFavorites(favorites - 1);
+      setWishList([...wishLists, value]);
+    }
   };
+
+  // const toggleLike = () => {
+  //   setIsLiked(!isLiked);
+  //   if (!isLiked) {
+  //     setFavorites(favorites + 1);
+  //   } else setFavorites(favorites - 1);
+  // };
 
   const generateRating = (rating: number) => {
     const filledStars = Array.from(
@@ -84,12 +100,13 @@ const ProductCard: React.FC<propsType> = ({
           BDT {price}
           <del className="text-gray-500 font-normal">{Number(price) * 2}</del>
         </div>
-
         <div
-          className={`heart-icon ${isLiked ? "liked" : ""} w-fit`}
-          onClick={toggleLike}
+          className={`heart-icon ${
+            wishLists.includes(id) ? "active:text-red-500" : ""
+          } w-fit`}
+          onClick={() => toggleWishList(id)}
         >
-          {isLiked ? <FaHeart /> : <FaRegHeart />}
+          {wishLists.includes(id) ? <FaHeart /> : <FaRegHeart />}
         </div>
       </div>
     </div>

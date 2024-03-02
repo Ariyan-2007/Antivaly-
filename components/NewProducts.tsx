@@ -4,13 +4,15 @@ import Pagination from "./Pagination";
 
 const productData = [
   {
+    index: 1,
     img: "/item-1.jpg",
     title: "Footwear",
     desc: "Tennis Shoes - Brown",
-    rating: 2.5,
+    rating: 3.5,
     price: "2500",
   },
   {
+    index: 2,
     img: "/item-2.jpg",
     title: "Accessories",
     desc: "Pretty Necklace - Emerald",
@@ -18,6 +20,7 @@ const productData = [
     price: "10500",
   },
   {
+    index: 3,
     img: "/item-3.jpg",
     title: "Clothing",
     desc: "Men's T-Shirt - Red",
@@ -25,6 +28,7 @@ const productData = [
     price: "1250",
   },
   {
+    index: 4,
     img: "/item-4.jpg",
     title: "Clothing",
     desc: "Hoodie - Cream",
@@ -32,6 +36,7 @@ const productData = [
     price: "3000",
   },
   {
+    index: 5,
     img: "/item-5.jpg",
     title: "Accessories",
     desc: "Men's Watch - Brown",
@@ -39,6 +44,7 @@ const productData = [
     price: "750",
   },
   {
+    index: 6,
     img: "/item-6.jpg",
     title: "Clothing",
     desc: "Party Dress - Red",
@@ -46,6 +52,7 @@ const productData = [
     price: "7500",
   },
   {
+    index: 7,
     img: "/item-1.jpg",
     title: "Footwear",
     desc: "Tennis Shoes - Brown",
@@ -53,6 +60,7 @@ const productData = [
     price: "2500",
   },
   {
+    index: 8,
     img: "/item-2.jpg",
     title: "Accessories",
     desc: "Pretty Necklace - Emerald",
@@ -60,6 +68,7 @@ const productData = [
     price: "10500",
   },
   {
+    index: 9,
     img: "/item-3.jpg",
     title: "Clothing",
     desc: "Men's T-Shirt - Red",
@@ -67,6 +76,7 @@ const productData = [
     price: "1250",
   },
   {
+    index: 10,
     img: "/item-4.jpg",
     title: "Clothing",
     desc: "Hoodie - Cream",
@@ -74,6 +84,7 @@ const productData = [
     price: "3000",
   },
   {
+    index: 11,
     img: "/item-5.jpg",
     title: "Accessories",
     desc: "Men's Watch - Brown",
@@ -81,6 +92,7 @@ const productData = [
     price: "750",
   },
   {
+    index: 12,
     img: "/item-6.jpg",
     title: "Clothing",
     desc: "Party Dress - Red",
@@ -88,6 +100,7 @@ const productData = [
     price: "7500",
   },
   {
+    index: 13,
     img: "/item-1.jpg",
     title: "Footwear",
     desc: "Tennis Shoes - Brown",
@@ -95,6 +108,7 @@ const productData = [
     price: "2500",
   },
   {
+    index: 14,
     img: "/item-2.jpg",
     title: "Accessories",
     desc: "Pretty Necklace - Emerald",
@@ -102,6 +116,7 @@ const productData = [
     price: "10500",
   },
   {
+    index: 15,
     img: "/item-3.jpg",
     title: "Clothing",
     desc: "Men's T-Shirt - Red",
@@ -109,6 +124,7 @@ const productData = [
     price: "1250",
   },
   {
+    index: 16,
     img: "/item-4.jpg",
     title: "Clothing",
     desc: "Hoodie - Cream",
@@ -116,6 +132,7 @@ const productData = [
     price: "3000",
   },
   {
+    index: 17,
     img: "/item-5.jpg",
     title: "Accessories",
     desc: "Men's Watch - Brown",
@@ -123,6 +140,7 @@ const productData = [
     price: "750",
   },
   {
+    index: 18,
     img: "/item-6.jpg",
     title: "Clothing",
     desc: "Party Dress - Red",
@@ -130,6 +148,7 @@ const productData = [
     price: "7500",
   },
   {
+    index: 19,
     img: "/item-1.jpg",
     title: "Footwear",
     desc: "Tennis Shoes - Brown",
@@ -137,6 +156,7 @@ const productData = [
     price: "2500",
   },
   {
+    index: 20,
     img: "/item-2.jpg",
     title: "Accessories",
     desc: "Pretty Necklace - Emerald",
@@ -144,6 +164,7 @@ const productData = [
     price: "10500",
   },
   {
+    index: 21,
     img: "/item-3.jpg",
     title: "Clothing",
     desc: "Men's T-Shirt - Red",
@@ -151,6 +172,7 @@ const productData = [
     price: "1250",
   },
   {
+    index: 22,
     img: "/item-4.jpg",
     title: "Clothing",
     desc: "Hoodie - Cream",
@@ -158,6 +180,7 @@ const productData = [
     price: "3000",
   },
   {
+    index: 23,
     img: "/item-5.jpg",
     title: "Accessories",
     desc: "Men's Watch - Brown",
@@ -165,6 +188,7 @@ const productData = [
     price: "750",
   },
   {
+    index: 24,
     img: "/item-6.jpg",
     title: "Clothing",
     desc: "Party Dress - Red",
@@ -172,6 +196,7 @@ const productData = [
     price: "7500",
   },
   {
+    index: 25,
     img: "/item-1.jpg",
     title: "Footwear",
     desc: "Tennis Shoes - Brown",
@@ -179,6 +204,7 @@ const productData = [
     price: "2500",
   },
   {
+    index: 26,
     img: "/item-2.jpg",
     title: "Accessories",
     desc: "Pretty Necklace - Emerald",
@@ -186,6 +212,7 @@ const productData = [
     price: "10500",
   },
   {
+    index: 27,
     img: "/item-3.jpg",
     title: "Clothing",
     desc: "Men's T-Shirt - Red",
@@ -193,6 +220,7 @@ const productData = [
     price: "1250",
   },
   {
+    index: 28,
     img: "/item-4.jpg",
     title: "Clothing",
     desc: "Hoodie - Cream",
@@ -200,6 +228,7 @@ const productData = [
     price: "3000",
   },
   {
+    index: 29,
     img: "/item-5.jpg",
     title: "Accessories",
     desc: "Men's Watch - Brown",
@@ -207,6 +236,7 @@ const productData = [
     price: "750",
   },
   {
+    index: 30,
     img: "/item-6.jpg",
     title: "Clothing",
     desc: "Party Dress - Red",
@@ -231,14 +261,16 @@ const NewProducts = ({ page = 1 }) => {
 
         <div className="grid place-items-center sm:place-items-start grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5  gap-10 xl:gap-x-20 xl:gap-y-10 ">
           {product.map((item, index) => (
-            <ProductCard
-              key={index}
-              img={item.img}
-              title={item.title}
-              desc={item.desc}
-              rating={item.rating}
-              price={item.price}
-            />
+            <div key={index}>
+              <ProductCard
+                id={item.index}
+                img={item.img}
+                title={item.title}
+                desc={item.desc}
+                rating={item.rating}
+                price={item.price}
+              />
+            </div>
           ))}
         </div>
         <Pagination totalPage={totalPages} currentPage={pageNumber} />

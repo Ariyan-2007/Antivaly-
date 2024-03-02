@@ -18,7 +18,7 @@ const Pagination = ({ totalPage = 1, currentPage = 1 }) => {
       </Link>
 
       {[...Array(totalPage)].map((_ele, ind) => (
-        <Link href={`/?page=${ind + 1}`}>
+        <Link key={ind} href={`/?page=${ind + 1}`}>
           <button
             className={` border  rounded-sm px-[8px] py-[2px] text-[14px]  hover:bg-accent ${
               currentPage === ind + 1
